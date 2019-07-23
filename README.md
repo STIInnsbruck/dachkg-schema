@@ -65,3 +65,8 @@ tstdp:wineOfTheDay a rdf:Property ;
 6. If you want to submit your third-party extension to the DACH-KG extensions list, please for this repository, add a row with the requested information to the table in Third-Party-Extensions.md and make a pull request.
 
 For more information please contact the editors of this file and repository or write an email to elias.kaerle [a t] sti2.at or umutcan.simsek [a t] sti2.at.
+## DomainSpecifications using the extensions
+
+* Trail: https://ds.sti2.org/__TEAHKCd
+
+For more information please contact the editors of this file or the respective files or repositories or write an email to elias.kaerle@sti2.at or umutcan.simsek@sti2.at.
