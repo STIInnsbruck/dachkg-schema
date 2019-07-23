@@ -58,5 +58,8 @@ tstdp:wineOfTheDay a rdf:Property ;
 5. [UMUT: is there a way to validate their file???]
 6. if you are done [UMUT, how to tell us to add that???]
 
+## DomainSpecifications using the extensions
 
-For more information please contact the editors of this file and repository or write an email to elias.kaerle@sti2.at or umutcan.simsek@sti2.at.
+* Trail: https://ds.sti2.org/__TEAHKCd
+
+For more information please contact the editors of this file or the respective files or repositories or write an email to elias.kaerle@sti2.at or umutcan.simsek@sti2.at.
