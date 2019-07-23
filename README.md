@@ -29,14 +29,13 @@ This sections gives examples of how to add own vocabulary to the dachkg namespac
 suppose we have a company called **the super tourism data provider** or short **tstdp**.
 
 1. If you have no GithHub account, create one and create a new repository called, named *****-extension** (e.g.: **tstdp-extension**).
-   
+
    [UMUT: or clone ours???]
 2. Copy the extension template file (mycompany.ttl) in template-extension folder in this repository and paste into the root of repository. Rename the file as you wish (keep the .ttl file format), and edit the file.
 3. then you decide on a namespace. This could be **https://thesuperprovider.com/ontology/1.0/** abbreviated with **tstdp:**.
 4. start adding your classes and properties and make sure to always use **rdfs:subClassOf** to your class definition to make it part of the dachkg vocabulary.
-5. Commit and push your extension to your github repository.
 
-Your extension file, based on the provided template would then look like this:
+Your extension file, based on the provided template, would then look like this:
 
 ```
 @prefix dachkg: <http://http://dachkg.org/ontology/1.0/> .
@@ -61,7 +60,7 @@ tstdp:wineOfTheDay a rdf:Property ;
     rdfs:subPropertyOf dachkg:drinkOfTheDay .
 ```
 
-5. **[UMUT: is there a way to validate their file???] ELIAS: Syntactically, yes, semantically also yes but may be harder.**
+5. Commit and push your extension to your github repository.
 
 6. If you want to submit your third-party extension to the DACH-KG extensions list, please for this repository, add a row with the requested information to the table in [Third-Party-Extensions.md](Third-Party-Extensions.md) and make a pull request.
 
