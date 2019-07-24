@@ -1,4 +1,6 @@
 @prefix dachkg: <http://http://dachkg.org/ontology/1.0/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix schema: <http://schema.org/> .
 @prefix my-comp: <https://my-company.org/ontology/1.0/> .
 
@@ -7,7 +9,7 @@
 my-comp:Heurigen a rdfs:Class ;
     rdfs:label "Heurigen" ;
     rdfs:comment "A place where you consume housmade wine." ;
-    rdfs:subClassOf schema:LocalBusiness .
+    rdfs:subClassOf schema:LocalBusiness ;
     rdfs:subClassOf schema:Winery .
 
 #Properties
