@@ -60,7 +60,7 @@ tstdp:wineOfTheDay a rdf:Property ;
 ```
 or like that (in JSON-LD syntax):
 
-```javascript
+```json
 {
   "@context": {
     "dachkg": "http://http://dachkg.org/ontology/1.0/",
