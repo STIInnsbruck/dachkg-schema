@@ -59,6 +59,7 @@ tstdp:wineOfTheDay a rdf:Property ;
     rdfs:subPropertyOf dachkg:drinkOfTheDay .
 ```
 or like that (in JSON-LD syntax):
+
 ```json
 {
   "@context": {
