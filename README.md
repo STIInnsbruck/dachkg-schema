@@ -29,15 +29,14 @@ This sections gives examples of how to add own vocabulary to the dachkg namespac
 suppose we have a company called **the super tourism data provider** or short **tstdp**.
 
 1. If you have no GithHub account, create one and create a new repository called, named *****-extension** (e.g.: **tstdp-extension**).
-   
-   [UMUT: or clone ours???]
-2. Copy the extension template file (mycompany.ttl) in template-extension folder in this repository and paste into the root of repository. Rename the file as you wish (keep the .ttl file format), and edit the file.
+
+2. Copy the extension template file (my-company.ttl OR my-company.json) in the *template-extension* folder of this repository into the root of your new repository. Rename the file as you wish (keep the .ttl OR .json file format), and edit the file.
 3. then you decide on a namespace. This could be **https://thesuperprovider.com/ontology/1.0/** abbreviated with **tstdp:**.
 4. start adding your classes and properties and make sure to always use **rdfs:subClassOf** to your class definition to make it part of the dachkg vocabulary.
 
-Your extension file, based on the provided template, would then look like this:
+Your extension file, based on the provided template, would then either look like this (in Turtle syntax):
 
-```
+```turtle
 @prefix dachkg: <http://http://dachkg.org/ontology/1.0/> .
 @prefix schema: <http://schema.org/> .
 @prefix tstdp: <https://thesuperprovider.com/ontology/1.0/> .
@@ -59,10 +58,55 @@ tstdp:wineOfTheDay a rdf:Property ;
     rdfs:comment "The wine of the day sold in a Heurigen." ;
     rdfs:subPropertyOf dachkg:drinkOfTheDay .
 ```
+or like that (in JSON-LD syntax):
+
+```json
+{
+  "@context": {
+    "dachkg": "http://http://dachkg.org/ontology/1.0/",
+    "my-comp": "https://my-company.org/ontology/1.0/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "http://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "my-comp:Heurigen",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "A place where you consume housmade wine.",
+      "rdfs:label": "Heurigen",
+      "rdfs:subClassOf": [
+        {
+          "@id": "schema:LocalBusiness"
+        },
+        {
+          "@id": "schema:Winery"
+        }
+      ]
+    },
+    {
+      "@id": "my-comp:wineOfTheDay",
+      "@type": "rdf:Property",
+      "rdfs:comment": "The wine of the day sold in a Heurigen.",
+      "rdfs:label": "wineOfTheDay",
+      "rdfs:subPropertyOf": {
+        "@id": "dachkg:drinkOfTheDay"
+      },
+      "schema:domainIncludes": {
+        "@id": "my-comp:Heurigen"
+      },
+      "schema:rangeIncludes": {
+        "@id": "schema:Text"
+      }
+    }
+  ]
+}
+```
 
 5. Commit and push your extension to your github repository.
 
-6. If you want to submit your third-party extension to the DACH-KG extensions list, please for this repository, add a row with the requested information to the table in [Third-Party-Extensions file](extensions/README.md) and make a pull request.
+6. If you want to submit your third-party extension to the DACH-KG extensions list, please for this repository, add a row with the requested information to the table in [Third-Party-Extensions Readme](extensions/README.md) and make a pull request.
 
 ## DomainSpecifications using the extensions
 
