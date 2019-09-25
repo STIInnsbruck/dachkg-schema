@@ -25,7 +25,7 @@
     {
       "@id": "dachkg:Trail",
       "@type": "rdfs:Class",
-      "rdfs:comment": "A  a path, track or unpaved lane or road for sport activities or walking.",
+      "rdfs:comment": "A path, track or unpaved lane or road for sport activities or walking.",
       "rdfs:label": "Trail",
       "rdfs:subClassOf": {
         "@id": "schema:Place"
