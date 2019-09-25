@@ -1,12 +1,21 @@
 {
   "@context": {
-    "dachkg": "http://dachkg.org/ontology/1.0/",
+    "dachkg": "http://http://dachkg.org/ontology/1.0/",
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "http://schema.org/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
   "@graph": [
+    {
+      "@id": "dachkg:Trail",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "A  a path, track or unpaved lane or road for sport activities or walking.",
+      "rdfs:label": "Trail",
+      "rdfs:subClassOf": {
+        "@id": "schema:Place"
+      }
+    },
     {
       "@id": "dachkg:endLocation",
       "@type": "rdf:Property",
@@ -23,41 +32,6 @@
       }
     },
     {
-      "@id": "dachkg:Trail",
-      "@type": "rdfs:Class",
-      "rdfs:comment": "A  a path, track or unpaved lane or road for sport activities or walking.",
-      "rdfs:label": "Trail",
-      "rdfs:subClassOf": {
-        "@id": "schema:Place"
-      }
-    },
-    {
-      "@id": "schema:additionalProperty",
-      "@type": "rdf:Property",
-      "rdfs:comment": "A property-value pair representing an additional characteristics of the entitity, e.g. a product feature or another characteristic for which there is no matching property in schema.org. Note: Publishers should be aware that applications designed to use specific schema.org properties (e.g. http://schema.org/width, http://schema.org/color, http://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism.",
-      "rdfs:label": "additionalProperty",
-      "schema:domainIncludes": [
-        {
-          "@id": "schema:Place"
-        },
-        {
-          "@id": "schema:QualitativeValue"
-        },
-        {
-          "@id": "schema:Thing"
-        },
-        {
-          "@id": "schema:QuantitativeValue"
-        },
-        {
-          "@id": "schema:Product"
-        }
-      ],
-      "schema:rangeIncludes": {
-        "@id": "schema:PropertyValue"
-      }
-    },
-    {
       "@id": "dachkg:wayPoint",
       "@type": "rdf:Property",
       "rdfs:comment": "A waypoint is an intermediate point or place or stoping point on a trail or line of travel.",
@@ -70,10 +44,10 @@
       },
       "schema:rangeIncludes": [
         {
-          "@id": "schema:Place"
+          "@id": "schema:ItemList"
         },
         {
-          "@id": "schema:ItemList"
+          "@id": "schema:Place"
         }
       ]
     },
