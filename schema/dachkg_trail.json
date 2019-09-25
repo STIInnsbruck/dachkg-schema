@@ -1,6 +1,6 @@
 {
   "@context": {
-    "dachkg": "http://http://dachkg.org/ontology/1.0/",
+    "dachkg": "http://dachkg.org/ontology/1.0/",
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "http://schema.org/",
@@ -10,7 +10,7 @@
     {
       "@id": "dachkg:Trail",
       "@type": "rdfs:Class",
-      "rdfs:comment": "A  a path, track or unpaved lane or road for sport activities or walking.",
+      "rdfs:comment": "A path, track or unpaved lane or road for sport activities or walking.",
       "rdfs:label": "Trail",
       "rdfs:subClassOf": {
         "@id": "schema:Place"
