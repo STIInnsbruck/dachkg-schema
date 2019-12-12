@@ -1,0 +1,3 @@
+[submodule "onlim-schema-extension"]
+	path = onlim-schema-extension
+	url = https://github.com/onlimgmbh/onlim-schema-extension

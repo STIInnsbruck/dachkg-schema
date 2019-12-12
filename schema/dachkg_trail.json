@@ -1,0 +1,87 @@
+{
+  "@context": {
+    "dachkg": "http://dachkg.org/ontology/1.0/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "http://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "dachkg:Trail",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "A path, track or unpaved lane or road for sport activities or walking.",
+      "rdfs:label": "Trail",
+      "rdfs:subClassOf": {
+        "@id": "schema:Place"
+      }
+    },
+    {
+      "@id": "dachkg:endLocation",
+      "@type": "rdf:Property",
+      "rdfs:comment": "A sub property of schema.org location. The final location of the trail.",
+      "rdfs:label": "endLocation",
+      "rdfs:subPropertyOf": {
+        "@id": "schema:location"
+      },
+      "schema:domainIncludes": {
+        "@id": "dachkg:Trail"
+      },
+      "schema:rangeIncludes": {
+        "@id": "schema:Place"
+      }
+    },
+    {
+      "@id": "dachkg:wayPoint",
+      "@type": "rdf:Property",
+      "rdfs:comment": "A waypoint is an intermediate point or place or stoping point on a trail or line of travel.",
+      "rdfs:label": "wayPoints",
+      "rdfs:subPropertyOf": {
+        "@id": "schema:location"
+      },
+      "schema:domainIncludes": {
+        "@id": "dachkg:Trail"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:ItemList"
+        },
+        {
+          "@id": "schema:Place"
+        }
+      ]
+    },
+    {
+      "@id": "dachkg:startLocation",
+      "@type": "rdf:Property",
+      "rdfs:comment": "A sub property of schema.org location. The start location of the trail.",
+      "rdfs:label": "startLocation",
+      "rdfs:subPropertyOf": {
+        "@id": "schema:location"
+      },
+      "schema:domainIncludes": {
+        "@id": "dachkg:Trail"
+      },
+      "schema:rangeIncludes": {
+        "@id": "schema:Place"
+      }
+    },
+    {
+      "@id": "dachkg:typeOfTrail",
+      "@type": "rdf:Property",
+      "rdfs:comment": "A trail with a specific preferred or exclusive use, such as bicycle trail, hiking trail, ski trail, etc.",
+      "rdfs:label": "typeOfTrail",      
+      "schema:domainIncludes": {
+        "@id": "dachkg:Trail"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        },
+        {
+          "@id": "schema:URL"
+        }
+      ]
+    }
+  ]
+}
